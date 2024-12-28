@@ -1,11 +1,15 @@
 {
   "name": "hahocss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/styles.min.css",
   "scripts": {
     "build": "npx postcss src/styles.css -o dist/styles.min.css"
   },
-  "keywords": ["css", "lightweight", "library"],
+  "keywords": [
+    "css",
+    "lightweight",
+    "library"
+  ],
   "author": "HaHoLuLa",
   "license": "MIT",
   "description": "경량 CSS 라이브러리",
