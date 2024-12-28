@@ -14,5 +14,13 @@
     "cssnano": "^7.0.6",
     "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0"
+  },
+  "homepage": "https://github.com/HaHoLuLa/HaHoCSS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HaHoLuLa/HaHoCSS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HaHoLuLa/HaHoCSS/issues"
   }
 }
