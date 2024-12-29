@@ -3,3 +3,4 @@ src/
 .env
 postcss.config.js
 .gitignore
+tests/
