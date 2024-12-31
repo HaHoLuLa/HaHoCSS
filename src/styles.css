@@ -1,9 +1,4 @@
 /* 초기화 */
-html {
-  box-sizing: border-box;
-}
-
-html,
 body {
   margin: 0;
   padding: 0;
@@ -20,6 +15,7 @@ body {
   --color-secondary: #E5D9F2;
   --color-secondary-lighten: #F5EFFF;
   --color-light: #fff;
+  --color-mid: #ccc;
   --color-dark: #222;
 }
 
@@ -128,6 +124,10 @@ textarea:focus {
   border-color: var(--color-primary-lighten);
 }
 
+input::placeholder, textarea::placeholder {
+  color: var(--color-mid);
+}
+
 /* 테이블 */
 table {
   border-collapse: collapse;
@@ -145,6 +145,16 @@ th {
 
 tr:nth-child(even) {
   background-color: var(--color-primary-lighten);
+}
+
+/* 리스트 */
+ol, ul {
+  padding: 1.5rem;
+}
+
+li::marker {
+  color: var(--color-primary);
+  transition: color 0.3s;
 }
 
 /* 유틸리티 클래스 */
