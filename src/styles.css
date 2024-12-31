@@ -6,10 +6,9 @@ body {
 
 /* 시작 */
 :root {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
   --color-text: #222;
   --color-background: #fff;
+  --color-background-sub: #eee;
   --color-primary: #A294F9;
   --color-primary-lighten: #CDC1FF;
   --color-secondary: #E5D9F2;
@@ -17,6 +16,9 @@ body {
   --color-light: #fff;
   --color-mid: #ccc;
   --color-dark: #222;
+  --font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--font-size);
 }
 
 /* 의사 요소 */
@@ -51,7 +53,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  font-weight: bold;
   margin: 1rem 0;
 }
 
@@ -79,17 +81,37 @@ h6 {
   font-size: 1rem;
 }
 
+/* 타이포그래피 */
+p {
+  margin: 1rem 0;
+}
+
+mark {
+  background-color: var(--color-secondary-lighten);
+}
+
 /* 버튼 */
-button {
+button, [type="button"], [type="submit"], [type="reset"], [role="button"] {
+  font-size: var(--font-size);
   color: var(--color-light);
   background-color: var(--color-primary);
   border: none;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   transition: background-color 0.3s;
-  font-weight: 600;
+  font-weight: bold;
 }
 
+/* 링크 */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--color-primary-lighten);
+}
 
 button:hover:not(:disabled) {
   background-color: var(--color-primary-lighten);
@@ -110,6 +132,8 @@ progress {
 /* 입력 */
 input,
 textarea {
+  caret-color: var(--color-primary);
+  font-size: var(--font-size);
   color: var(--color-text);
   background-color: transparent;
   border: solid 0.2rem var(--color-primary);
@@ -120,21 +144,26 @@ textarea {
 
 input:focus,
 textarea:focus {
+  caret-color: var(--color-primary-lighten);
   outline: none;
   border-color: var(--color-primary-lighten);
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: var(--color-mid);
 }
 
 /* 테이블 */
 table {
   border-collapse: collapse;
+  border-radius: 0.25rem;
+  border-style: hidden;
+  box-shadow: 0 0 0 0.2rem var(--color-primary);
 }
 
-th, td {
-  border: solid 0.2rem var(--color-primary);
+th,
+td {
   padding: 0.5rem;
 }
 
@@ -148,8 +177,10 @@ tr:nth-child(even) {
 }
 
 /* 리스트 */
-ol, ul {
-  padding-left: 1.5rem;
+ol,
+ul {
+  padding-left: 1rem;
+  margin: 1rem;
 }
 
 li::marker {
@@ -157,8 +188,36 @@ li::marker {
   transition: color 0.3s;
 }
 
-/* 유틸리티 클래스 */
-.container {
+/* 기타 */
+pre,
+blockquote {
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 0.25rem;
+  background-color: var(--color-background-sub);
+}
+
+blockquote {
+  border-left: solid 0.5rem var(--color-primary);
+}
+
+blockquote>cite {
+  color: var(--color-mid)
+}
+
+pre {
+  background-color: var(--color-background-sub);
+  overflow-x: auto;
+}
+
+code {
+  background-color: var(--color-background-sub);
+}
+
+/* 레이아웃 */
+body>header,
+body>main,
+body>footer {
   width: 60%;
   margin: 0 auto;
 }
@@ -168,41 +227,48 @@ li::marker {
   :root {
     --color-text: #fff;
     --color-background: #222;
+    --color-background-sub: #444;
   }
 }
 
 @media screen and (max-width: 1600px) {
   :root {
-    font-size: 15px;
+    --font-size: 15px;
   }
 }
 
 @media screen and (max-width: 1280px) {
   :root {
-    font-size: 14px;
+    --font-size: 14px;
   }
 
-  .container {
+  body>header,
+  body>main,
+  body>footer {
     width: 80%;
   }
 }
 
 @media screen and (max-width: 1024px) {
   :root {
-    font-size: 13px;
+    --font-size: 13px;
   }
 
-  .container {
+  body>header,
+  body>main,
+  body>footer {
     width: 90%;
   }
 }
 
 @media screen and (max-width: 768px) {
   :root {
-    font-size: 12px;
+    --font-size: 12px;
   }
 
-  .container {
+  body>header,
+  body>main,
+  body>footer {
     width: 95%;
   }
 }
