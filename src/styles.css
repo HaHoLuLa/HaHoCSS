@@ -43,50 +43,6 @@ body {
   background-color: transparent;
 }
 
-/* 미디어 쿼리 */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-text: #fff;
-    --color-background: #222;
-  }
-}
-
-@media screen and (max-width: 1600px) {
-  :root {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  :root {
-    font-size: 14px;
-  }
-
-  .container {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  :root {
-    font-size: 13px;
-  }
-
-  .container {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  :root {
-    font-size: 12px;
-  }
-
-  .container {
-    width: 95%;
-  }
-}
-
 body {
   color: var(--color-text);
   background-color: var(--color-background);
@@ -195,4 +151,48 @@ tr:nth-child(even) {
 .container {
   width: 60%;
   margin: 0 auto;
+}
+
+/* 미디어 쿼리 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #fff;
+    --color-background: #222;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    font-size: 13px;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 12px;
+  }
+
+  .container {
+    width: 95%;
+  }
 }
