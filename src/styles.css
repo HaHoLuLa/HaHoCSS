@@ -215,9 +215,7 @@ code {
 }
 
 /* 레이아웃 */
-body>header,
-body>main,
-body>footer {
+header, main, footer {
   width: 60%;
   margin: 0 auto;
 }
@@ -242,9 +240,7 @@ body>footer {
     --font-size: 14px;
   }
 
-  body>header,
-  body>main,
-  body>footer {
+  header, main, footer {
     width: 80%;
   }
 }
@@ -254,9 +250,7 @@ body>footer {
     --font-size: 13px;
   }
 
-  body>header,
-  body>main,
-  body>footer {
+  header, main, footer {
     width: 90%;
   }
 }
@@ -266,9 +260,7 @@ body>footer {
     --font-size: 12px;
   }
 
-  body>header,
-  body>main,
-  body>footer {
+  header, main, footer {
     width: 95%;
   }
 }
