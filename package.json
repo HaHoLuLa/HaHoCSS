@@ -1,6 +1,6 @@
 {
   "name": "hahocss",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "main": "dist/styles.min.css",
   "scripts": {
     "build": "npx postcss src/styles.css -o dist/styles.min.css"
